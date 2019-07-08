@@ -1,0 +1,84 @@
+/*BKM Deploy theme style*/
+.cms-noroute-index a[href^="tel:"] {
+  color:#323232;
+  text-decoration: none;
+} 
+.cms-noroute-index h1 {
+    font-size: 3rem;
+}
+.cms-noroute-index .benefits-container,
+.cms-noroute-index .pressclip-container {
+    text-align: center
+}
+.cms-noroute-index .benefits-container h4 {
+    margin-bottom: 1rem;
+}
+.cms-noroute-index .benefits-container ul {
+    display: block;
+    list-style: none;
+}
+.cms-noroute-index .benefits-container li {
+    float: left;
+    width: 50%;
+    padding: 0;
+    height: 20rem;
+}
+.cms-noroute-index .benefits-container li::before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    font-family: 'icons-blank-theme';
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+    color: #3b8b94;
+}
+.cms-noroute-index .benefits-container li.icon-truck::before {
+    content: '\e917';
+    font-size: 4.8rem;
+}
+.cms-noroute-index .benefits-container li.icon-returns::before {
+    content: '\e918';
+    font-size: 4.1rem;
+    padding-bottom: .7rem;
+}
+.cms-noroute-index .benefits-container li.icon-contact::before {
+    content: '\e804';
+    font-size: 4.3rem;
+    padding-bottom: .5rem;
+}
+.cms-noroute-index .benefits-container li.icon-chat::before {
+    content: '\e620';
+    font-size: 4.8rem;
+}
+.cms-noroute-index .benefits-container li.icon-email::before {
+    content: '\e61d';
+    font-size: 4.8rem;
+}
+.cms-noroute-index .benefits-container li.icon-tips::before {
+    content: '\e629';
+    font-size: 4.8rem;
+}
+
+
+@media all and (min-width: 768px),print {
+    .cms-noroute-index .cms-noroute-index h1 {
+        font-size: 30px;
+    }
+    .cms-noroute-index .benefits-container ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+    .cms-noroute-index .benefits-container li {
+        float: none;
+        width: auto;
+        padding: 0 1rem;
+        height: auto;
+    }
+}
