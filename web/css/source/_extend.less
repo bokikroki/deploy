@@ -1,4 +1,11 @@
 //
+//  Typography
+//  ---------------------------------------------
+@import "variables/_typographyextend";
+@import "variables/_iconsextend";
+
+
+//
 //  BKM 404 Page
 //  ---------------------------------------------
 
@@ -19,80 +26,84 @@
     }
 
     .benefits-container {
-
+        
         h4 {
             margin-bottom: 1rem;
         }
-
+        
         ul {
             list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
 
             li {
-    
-                &:before {
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                    font-size: inherit;
-                    line-height: inherit;
-                    color: inherit;
-                    font-family: 'icons-blank-theme';
-                    vertical-align: middle;
-                    display: inline-block;
-                    font-weight: normal;
-                    overflow: hidden;
-                    speak: none;
-                    text-align: center;
-                    color: #3b8b94;
-                }
+                flex: 0 1 auto;
+                padding: 0 1rem;
+
+                .lib-icon-font(
+                    @_icon-font-content: @icon-phone
+                );
     
                 &.icon-truck {
-    
-                    &:before {
-                        content: '\e917';
-                        font-size: 4.8rem;
-                    }
+
+                    .lib-icon-font(
+                    @icon-truck,
+                    @_icon-font-size: 4.8rem,
+                    @_icon-font-color: @color-orange-red2,
+                    @_icon-font-color-hover: @color-orange-red1
+                    );
                 }
     
                 &.icon-returns {
     
-                    &::before {
-                        content: '\e918';
-                        font-size: 4.1rem;
-                        padding-bottom: .7rem;
-                    }
+                    .lib-icon-font(
+                    @icon-repeat1,
+                    @_icon-font-size: 4.8rem,
+                    @_icon-font-color: @color-orange-red2,
+                    @_icon-font-color-hover: @color-orange-red1
+                    );
                 }
     
                 &.icon-contact {
     
-                    &::before {
-                        content: '\e804';
-                        font-size: 4.3rem;
-                        padding-bottom: .5rem;
-                    }
+                    .lib-icon-font(
+                    @icon-phone,
+                    @_icon-font-size: 4.8rem,
+                    @_icon-font-color: @color-orange-red2,
+                    @_icon-font-color-hover: @color-orange-red1
+                    );
                 }
     
                 &.icon-chat {
     
-                    &::before {
-                        content: '\e620';
-                        font-size: 4.8rem;
-                    }
+                    .lib-icon-font(
+                    @icon-chat,
+                    @_icon-font-size: 4.8rem,
+                    @_icon-font-color: @color-orange-red2,
+                    @_icon-font-color-hover: @color-orange-red1
+                    );
                 }
     
                 &.icon-email {
     
-                    &::before {
-                        content: '\e61d';
-                        font-size: 4.8rem;
-                    }
+                    .lib-icon-font(
+                    @icon-mail,
+                    @_icon-font-size: 4.8rem,
+                    @_icon-font-color: @color-orange-red2,
+                    @_icon-font-color-hover: @color-orange-red1
+                    );
                 }
     
                 &.icon-tips {
     
-                    &::before {
-                        content: '\e629';
-                        font-size: 4.8rem;
-                    }
+                    .lib-icon-font(
+                    @icon-trophy,
+                    @_icon-font-size: 4.8rem,
+                    @_icon-font-color: @color-orange-red2,
+                    @_icon-font-color-hover: @color-orange-red1
+                    );
                 }
             }
         }
@@ -110,13 +121,9 @@
         .benefits-container {
             
             ul {
-                display: block;
 
                 li {
-                    float: left;
-                    width: 50%;
-                    padding: 0;
-                    height: 20rem;
+                    padding: 0 1rem;
                 }
             }
         }
@@ -133,22 +140,6 @@
 
         h1 {
             font-size: 30px;
-        }
-
-        .benefits-container {
-
-            ul {
-                display: flex;
-                justify-content: center;
-                list-style: none;
-
-                li {
-                    float: none;
-                    width: auto;
-                    padding: 0 1rem;
-                    height: auto;
-                }
-            }
         }
     }
 }
