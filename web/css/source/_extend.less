@@ -1,0 +1,154 @@
+//
+//  BKM 404 Page
+//  ---------------------------------------------
+
+.cms-noroute-index {
+
+    a[href^="tel:"] {
+      color:@primary__color;
+      text-decoration: none;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .benefits-container,
+    .pressclip-container {
+        text-align: center
+    }
+
+    .benefits-container {
+
+        h4 {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+    
+                &:before {
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    font-size: inherit;
+                    line-height: inherit;
+                    color: inherit;
+                    font-family: 'icons-blank-theme';
+                    vertical-align: middle;
+                    display: inline-block;
+                    font-weight: normal;
+                    overflow: hidden;
+                    speak: none;
+                    text-align: center;
+                    color: #3b8b94;
+                }
+    
+                &.icon-truck {
+    
+                    &:before {
+                        content: '\e917';
+                        font-size: 4.8rem;
+                    }
+                }
+    
+                &.icon-returns {
+    
+                    &::before {
+                        content: '\e918';
+                        font-size: 4.1rem;
+                        padding-bottom: .7rem;
+                    }
+                }
+    
+                &.icon-contact {
+    
+                    &::before {
+                        content: '\e804';
+                        font-size: 4.3rem;
+                        padding-bottom: .5rem;
+                    }
+                }
+    
+                &.icon-chat {
+    
+                    &::before {
+                        content: '\e620';
+                        font-size: 4.8rem;
+                    }
+                }
+    
+                &.icon-email {
+    
+                    &::before {
+                        content: '\e61d';
+                        font-size: 4.8rem;
+                    }
+                }
+    
+                &.icon-tips {
+    
+                    &::before {
+                        content: '\e629';
+                        font-size: 4.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .cms-noroute-index {
+    
+        .benefits-container {
+            
+            ul {
+                display: block;
+
+                li {
+                    float: left;
+                    width: 50%;
+                    padding: 0;
+                    height: 20rem;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .cms-noroute-index {
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .benefits-container {
+
+            ul {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+
+                li {
+                    float: none;
+                    width: auto;
+                    padding: 0 1rem;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
