@@ -1,7 +1,7 @@
 # BKM/deploy Magento 2 theme
 
 #Info
-This theme inherits 2b1c/deploy theme
+This theme inherits Magento/luma theme
 
 #Install instructions
 - Create dir. BKM into magento 2 folder app/design/frontend/
